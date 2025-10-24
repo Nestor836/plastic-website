@@ -1,0 +1,66 @@
+/* styles.css - Custom CSS for Plastic Shop Website */
+
+/* Hero Section */
+.hero {
+    background-image: url('https://via.placeholder.com/1920x600?text=Plastic+Shop+Banner');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Featured Products and Products Section */
+.featured-products, .products {
+    background-color: #f8f9fa;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+    background-color: #ffffff;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f8f9fa;
+}
+
+/* Cart Section */
+.cart {
+    background-color: #ffffff;
+}
+
+/* Payment Section */
+.payment {
+    background-color: #f8f9fa;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* General Body */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
