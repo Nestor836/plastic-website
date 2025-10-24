@@ -140,4 +140,27 @@ document.addEventListener('DOMContentLoaded', function() {
     if (paymentForm) {
         paymentForm.addEventListener('submit', submitPayment);
     }
+
+    // Highlight active nav link based on current page
+    const currentPath = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    document.querySelectorAll('.navbar .nav-link').forEach(link => {
+        const href = (link.getAttribute('href') || '').toLowerCase();
+        if (href === currentPath) {
+            link.classList.add('active');
+        }
+    });
+
+    // Back-to-top button behavior
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        const toggleBackToTop = () => {
+            const show = window.scrollY > 400;
+            backToTop.classList.toggle('show', show);
+        };
+        window.addEventListener('scroll', toggleBackToTop, { passive: true });
+        toggleBackToTop();
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 });

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plastic Shop - Products</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -28,9 +28,25 @@
 
     <section class="products py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Our Product</h2>
+            <h2 class="section-title"><span>Our Products</span></h2>
+            <div class="filter-bar mb-4 d-flex flex-wrap gap-3 align-items-center">
+                <div class="input-group" style="max-width: 360px;">
+                    <span class="input-group-text">🔎</span>
+                    <input type="text" class="form-control" placeholder="Search products" aria-label="Search products">
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <label class="text-muted">Category</label>
+                    <select class="form-select" style="min-width: 180px;">
+                        <option selected>All</option>
+                        <option>Bottles</option>
+                        <option>Cups</option>
+                        <option>Plates</option>
+                        <option>Boxes</option>
+                    </select>
+                </div>
+            </div>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
                         <img src="https://via.placeholder.com/300" class="card-img-top" alt="Plastic Bottle">
                         <div class="card-body">
@@ -41,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
                         <img src="https://via.placeholder.com/300" class="card-img-top" alt="Plastic Cup">
                         <div class="card-body">
@@ -52,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
                         <img src="https://via.placeholder.com/300" class="card-img-top" alt="Plastic Plate">
                         <div class="card-body">
@@ -63,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
                         <img src="https://via.placeholder.com/300" class="card-img-top" alt="Plastic Box">
                         <div class="card-body">
@@ -79,8 +95,10 @@
     </section>
 
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2023 Plastic Shop. All rights reserved.</p>
+        <p>&copy; 2025 Plastic Shop. All rights reserved.</p>
     </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
